@@ -1,0 +1,7 @@
+---
+channel: stable
+addons:
+  letsencryptdns:
+    repository: hassio-addons/letsencrypt-dns
+    target: letsencrypt-dns
+    image: hassioaddons/letsencrypt-dns-{arch}

@@ -20,11 +20,11 @@ if [ ! -d "$CERT_DIR/live" ]; then
     done
 
     echo "$DOMAINS" > /data/domains.gen
-    certbot certonly --non-interactive --standalone --email "$EMAIL" --agree-tos --config-dir "$CERT_DIR" --work-dir "$WORK_DIR" --preferred-challenges "http" "${DOMAIN_ARR[@]}"
+    certbot certonly --non-interactive --standalone --email "$EMAIL" --agree-tos --config-dir "$CERT_DIR" --work-dir "$WORK_DIR" --preferred-challenges "dns" "${DOMAIN_ARR[@]}"
 
 # Renew certs
 else
-    certbot renew --non-interactive --config-dir "$CERT_DIR" --work-dir "$WORK_DIR" --preferred-challenges "http"
+    certbot renew --non-interactive --config-dir "$CERT_DIR" --work-dir "$WORK_DIR" --preferred-challenges "dns"
 fi
 
 # copy certs to store

@@ -1,14 +1,13 @@
 {
-  "name": "Let's Encrypt",
-  "version": "3.0",
-  "slug": "letsencrypt",
-  "description": "Manage certificate from Let's Encrypt",
+  "name": "Let's Encrypt DNS",
+  "version": "1.0",
+  "slug": "letsencrypt-dns",
+  "description": "Manage certificate from Let's Encrypt using DNS Challange",
   "url": "https://home-assistant.io/addons/lets_encrypt/",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "once",
   "boot": "manual",
   "ports": {
-    "80/tcp": 80
    },
   "map": ["ssl:rw"],
   "options": {
